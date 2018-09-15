@@ -1,3 +1,5 @@
+
+
 def findSum(n):
 	s = 0
 
@@ -13,6 +15,7 @@ def checkHarshad(n):
 
 	if(n%findSum(n)==0):
 		return True
+
 
 	return False 
 
