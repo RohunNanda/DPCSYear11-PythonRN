@@ -23,8 +23,8 @@ def checkHarshad(n): #Function "checkHarshad" is used to check is if a specific 
 
 print(checkHarshad(720));
 
-low = 21 #Low represents the minimum number in the range to finding the Harshad number
-high = 69 #High represents the maximum in the range to finding the Harshad number
+low = 22 #Low represents the minimum number in the range to finding the Harshad number
+high = 87 #High represents the maximum in the range to finding the Harshad number
 
 score = 0 #score is the starting count; for each consecutive Harshad number, "1" is added to indicate the amuont of consecutive Harshad numbers
 highScore = 0 #highScore is the count for how many consecutive Harshad numbers in a range from "low" to "high"
@@ -48,4 +48,5 @@ print(highScore)
 
 #f.close()
 
-#Commented lines disrupted programme (40-47)
+#Commented lines disrupted programme (42-47)
+#All complete
