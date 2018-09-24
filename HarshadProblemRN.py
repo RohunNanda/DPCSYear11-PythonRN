@@ -49,4 +49,4 @@ print(highScore)
 #f.close()
 
 #Commented lines disrupted programme (42-47)
-#All complete
+#It works
