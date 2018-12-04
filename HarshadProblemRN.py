@@ -36,7 +36,7 @@ for i in range(low,high + 1,1): #i = interger; range is from high to low
 		highScore = max(score,highScore)
 		score = 0; #resets the count for consecutive Harshad numbers
 
-highScore = max(score,highScore)
+highScore = max(score,highScore)  
 print(highScore)
 
 #f = open("DwiteHarshadNumbersData.txt", "r")
