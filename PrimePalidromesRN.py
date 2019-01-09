@@ -20,7 +20,7 @@
 
 #Step1: Check if the number is prime 
 def checkPrime(num):
-	if num<2:
+	if num<2 or num>999999:
 		return False
 	for i in range(2, num//2+1, 1):	
 		if num%i == 0:
@@ -44,7 +44,7 @@ def checkPrime(num):
 	return False
 The notation needs to be consistent therefore, the "checkPalindrome" needs to be in the integer notation
 '''
-
+#This algorithm can be casted from string notation to integer notation but it would highly inefficient
 
 #Step2: Check if the number is a palindrome 
 def checkPalindrome(n):
@@ -53,7 +53,7 @@ def checkPalindrome(n):
 	r = 0
 	while n > 0:
 		d = n%10
-		n = int(n/10) #Creates "n" into integer notation, not a string notation.
+		n = n//10 
 		r = r*10 + d
 
 	if (num == r):
@@ -61,12 +61,12 @@ def checkPalindrome(n):
 	else:	
 		return False
 
-#Step4: Create a loop checking the amount of PrimePalindrome between a range greater than 2 and less than 999,999
-def checkLoopPrimePalindrome(low, high):
+#Step3: Create a loop checking the amount of PrimePalindrome between a range greater than 2 and less than 999,999
+def checkPrimePalindrome(low, high):
 	ctr = 0
 
-	for i in range(high, low - 1, -1):
-		if checkPrime(n) == True and checkPalindrome(n) == True:
+	for i in range(low, high, 1):
+		if checkPrime(i) == True and checkPalindrome(i) == True:
 			ctr = ctr + 1
 	return ctr
 #This type of notation is only applicable to strings
@@ -79,12 +79,12 @@ def checkLoopPrimePalindrome(low, high):
 #print("Test check Prime",checkPrime(181)) #returns "True" and seven is a prime number
 
 #Test checkPalindrome    
-#print("Test check Palndrome:",checkPalindrome(181)) #returns "True" and 10001 is a prime number
+#print("Test check Palindrome:",checkPalindrome(181)) #returns "True" and 10001 is a prime number
 
-#Test checkPrimePalindrom 
+#Test checkPrimePalindrome 
 #print("Test check PrimePalindrome",checkPrimePalindrome())
 
 #The "Prime Palindromes" prompt requires that requires that the sample input includes three sets of data only:
-print("The amount of Prime Palindromes within the range is", checkLoopPrimePalindrome(2, 100))
-print("The amount of Prime Palindromes within the range is", checkLoopPrimePalindrome(100, 200))
-print("The amount of Prime Palindromes within the range is", checkLoopPrimePalindrome(200, 1000))
+print("The amount of Prime Palindromes within the range is", checkPrimePalindrome(2, 10))
+print("The amount of Prime Palindromes within the range is", checkPrimePalindrome(100, 200))
+print("The amount of Prime Palindromes within the range is", checkPrimePalindrome(2, 1000))
